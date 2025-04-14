@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/loginFuncionario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Eva n' Essence - Funcionário</title>
+</head>
+<body>
+    <main id="form_container">
+        <h1 id="title">Eva n' Essence</h1>
+        <div id="form_header">
+            <h1 id="form_title">Acesso Funcionário</h1>
+            <a href="../../index.html" class="btn-default" style="text-decoration: none;">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </a>  
+        </div>
+
+        <form action="centroFuncionario.html" method="post" id="form">
+            <div id="input_container">
+                <div class="input-box">
+                    <label for="matricula" class="form-label">Matrícula</label>
+                    <div class="input-field">   
+                        <input type="text" name="matricula" id="matricula" class="form-control" placeholder="Número de matrícula">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="password" class="form-label">Senha</label>
+                    <div class="input-field">   
+                        <input type="password" name="password" id="password" class="form-control" placeholder="********">
+                        <i class="fa-solid fa-eye-slash password-icon"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#">Problemas com acesso?</a>
+                </div>
+            </div>
+
+            <button class="btn-default" onclick="window.location.href='centroFuncionario.html'">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Acessar Sistema
+            </button>
+        </form>
+    </main>
+</body>
+</html>

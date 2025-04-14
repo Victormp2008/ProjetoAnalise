@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva n' Essence</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Eva n' Essence</h1>
+        <div class="btn-container">
+            <button class="btn-default" onclick="window.location.href='cliente/html/registerCliente.html'">Registrar</button>
+            <button class="btn-default" onclick="openModal()">Entrar</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content"> 
+            <button class="close" onclick="closeModal()">&times;</button>
+            <h2>Você é:</h2>
+            <div class="modal-buttons">
+                <form action="funcionario/html/loginFuncionario.html" method="post">
+                    <button type="submit" class="btn-default" >Funcionário</button>
+                </form>
+                <form action="cliente/html/loginCliente.html" method="post">
+                <button type="submit" class="btn-default">Cliente</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+        document.getElementById("modal").style.display = "flex";
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+        window.onload = function() {
+        closeModal();
+        history.replaceState(null, null, " ");
+        };
+    </script>
+</body>
+</html>

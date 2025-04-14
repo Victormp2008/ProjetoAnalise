@@ -1,0 +1,171 @@
+/* registerCliente.css (usado também para fornecedores) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #7F9DA0;
+    padding: 20px;
+}
+
+#title {
+    font-family: 'Garamond', serif;
+    color: #764951;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#form_container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+#form_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#form_title {
+    color: #764951;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#form_title::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background-color: #764951;
+    bottom: -10px;
+    left: 0;
+    border-radius: 3px;
+}
+
+.btn-default {
+    background-color: #764951;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-default:hover {
+    background-color: #5a343a;
+    transform: translateY(-2px);
+}
+
+#input_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #404044;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus-within {
+    border-color: #764951;
+    box-shadow: 0 0 0 2px rgba(118, 73, 81, 0.2);
+}
+
+.input-field i {
+    color: #764951;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    min-height: 18px;
+}
+
+/* Estilos específicos para campos de fornecedor */
+.input-field .fa-building {
+    color: #2a7f62; /* Verde diferente para diferenciar */
+}
+
+.input-field .fa-boxes {
+    color: #9c6b3d; /* Marrom para ícone de produtos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #input_container {
+        grid-template-columns: 1fr;
+    }
+    
+    #form_title::after {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    #form_container {
+        padding: 20px;
+    }
+    
+    .btn-default {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/centroFuncionario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Eva n' Essence - Centro Funcionário</title>
+</head>
+<body>
+    <header id="page_header">
+        <h1 id="title">Eva n' Essence</h1>
+        <div id="user_info">
+            <span id="user_name">Maria Silva</span>
+            <span id="user_role">Vendedor</span>
+        </div>
+    </header>
+
+    <main id="dashboard_container">
+        <div class="dashboard_card">
+            <h2 class="card_title">Cadastros</h2>
+            <div class="card_buttons">
+                <form action="../../fornecedor/registerFornecedor.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-truck"></i>
+                        Cadastrar Fornecedor
+                    </button>
+                </form>
+
+                <form action="../../fornecedor/consultarFornecedor.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Consultar Fornecedores
+                    </button>
+                </form>
+
+                <form action="../../cliente/html/registerCliente_copy.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Cadastrar Cliente
+                    </button>
+                </form>
+
+                <form action="consultarCliente.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Consultar Clientes
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="dashboard_card">
+            <h2 class="card_title">Registro de Ponto</h2>
+            <div class="card_buttons">
+                <button class="btn-default" id="registrar_ponto" onclick="window.location.href='registroPonto.html'">
+                    <i class="fa-solid fa-fingerprint"></i>
+                    Registrar Ponto
+                </button>
+                <button class="btn-default" onclick="window.location.href='registroPonto.html'">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Ver Meus Registros
+                </button>
+            </div>
+            <div id="ponto_status">
+                <p>Último registro: <span>Hoje às 08:15</span></p>
+                <p>Status atual: <span class="status_working">Em trabalho</span></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

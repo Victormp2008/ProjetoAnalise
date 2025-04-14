@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registerFuncionario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Eva n' Essence - Cadastro Funcionário</title>
+</head>
+<body>
+    <main id="form_container">
+        <h1 id="title">Eva n' Essence</h1>
+        <div id="form_header">
+            <h1 id="form_title">Cadastrar Funcionário</h1>
+            <button class="btn-default" onclick="window.location.href='loginFuncionario.html'">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </button>   
+        </div>
+
+        <form action="loginFuncionario.html" method="post" id="form">
+            <div id="input_container">
+                <div class="input-box">
+                    <label for="nome" class="form-label">Nome Completo</label>
+                    <div class="input-field">   
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o nome completo">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="matricula" class="form-label">Matrícula</label>
+                    <div class="input-field">   
+                        <input type="text" name="matricula" id="matricula" class="form-control" placeholder="Número de matrícula">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <div class="input-field">   
+                        <input type="text" name="cpf" id="cpf" class="form-control" placeholder="000.000.000-00">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="cargo" class="form-label">Cargo</label>
+                    <div class="input-field">   
+                        <select name="cargo" id="cargo" class="form-control">
+                            <option value="">Selecione o cargo</option>
+                            <option value="gerente">Gerente</option>
+                            <option value="vendedor">Vendedor</option>
+                            <option value="estoque">Estoquista</option>
+                            <option value="rh">RH</option>
+                        </select>
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="email" class="form-label">E-mail Corporativo</label>
+                    <div class="input-field">   
+                        <input type="email" name="email" id="email" class="form-control" placeholder="funcionario@evaessence.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <div class="input-field">   
+                        <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="+55 (00) 00000-0000">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="data_admissao" class="form-label">Data de Admissão</label>
+                    <div class="input-field">   
+                        <input type="date" name="data_admissao" id="data_admissao" class="form-control">
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="senha" class="form-label">Senha</label>
+                    <div class="input-field">   
+                        <input type="password" name="senha" id="senha" class="form-control" placeholder="********">
+                        <i class="fa-solid fa-eye-slash password-icon"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+
+                <div class="input-box">
+                    <label for="confirmar_senha" class="form-label">Confirmar Senha</label>
+                    <div class="input-field">   
+                        <input type="password" name="confirmar_senha" id="confirmar_senha" class="form-control" placeholder="********">
+                        <i class="fa-solid fa-eye-slash password-icon"></i>
+                    </div>
+                    <span class="error"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-default">
+                <i class="fa-solid fa-user-plus"></i>
+                Cadastrar Funcionário
+            </button>
+        </form>
+    </main>
+</body>
+</html>
