@@ -11,8 +11,8 @@
     <header id="page_header">
         <h1 id="title">Eva n' Essence</h1>
         <div id="user_info">
-            <span id="user_name">Maria Silva</span>
-            <span id="user_role">Vendedor</span>
+            <span id="user_name">Fulano da Silva</span>
+            <span id="user_role">Administrador</span>
         </div>
     </header>
 
@@ -48,6 +48,39 @@
                     </button>
                 </form>
                 
+                <button class="btn-default" onclick="window.location.href='registerFuncionario.html'">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Adicionar Funcionário
+                </button>
+
+                <form action="consultarFuncionario.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-users"></i>
+                        Consultar Funcionários
+                    </button>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="dashboard_card">
+            <h2 class="card_title">Estoque</h2>
+            <div class="card_buttons">
+
+                <form action="../../estoque/registerPerfume.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                        Cadastrar Perfume
+                    </button>
+                </form>
+                
+                <form action="consultarPerfume.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        Consultar Perfumes
+                    </button>
+                </form>
+
             </div>
         </div>
 

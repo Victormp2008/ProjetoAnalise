@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consultar Perfumes</title>
+  <link rel="stylesheet" href="consultarPerfume.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <main class="container">
+    <h1 class="title"><i class="fa-solid fa-magnifying-glass"></i> Consultar Perfumes</h1>
+
+    <div class="actions">
+      <button class="btn-default" onclick="window.location.href='registerPerfume.html'">
+        <i class="fa-solid fa-plus"></i> Adicionar Perfume
+      </button>
+      <form action="../funcionario/html/centroFuncionario.html" method="post">
+        <button class="btn-default" type="submit">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+        </button>
+      </form>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Marca</th>
+          <th>Fragrância</th>
+          <th>Volume</th>
+          <th>Preço</th>
+          <th>Estoque</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Exemplo de perfume -->
+        <tr>
+          <td>Essence Bloom</td>
+          <td>Eva n' Essence</td>
+          <td>Floral</td>
+          <td>100ml</td>
+          <td>R$ 199,90</td>
+          <td>20</td>
+          <td class="btn-group">
+            <button class="btn-acao"><i class="fa-solid fa-cart-shopping"></i> Vender</button>
+            <button class="btn-acao"><i class="fa-solid fa-file-invoice"></i> Emitir NF</button>
+            <button class="btn-acao excluir"><i class="fa-solid fa-trash"></i> Excluir</button>
+          </td>
+        </tr>
+        <!-- Adicione mais linhas conforme necessário -->
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
