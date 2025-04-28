@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfume | Eva n' Essence</title>
+    <link rel="stylesheet" href="../css/registerCliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página de perfumes */
+        .preview-imagem {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <main id="form_container">
+        <h1 id="title">Eva n' Essence</h1>
+        <div id="form_header">
+            <h1 id="form_title">Editar Perfume</h1>
+            <a href="consultaPerfume.html" class="btn-default">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>    
+        </div>
+
+        <form action="consultaPerfume.html" method="post">
+            <div id="input_container">
+                <div class="input-box">
+                    <label class="form-label">Nome do Perfume</label>
+                    <div class="input-field">   
+                        <input type="text" class="form-control" value="Essence Bloom" required>
+                        <i class="fa-solid fa-pump-soap"></i>
+                    </div>
+                </div>  
+
+                <div class="input-box">
+                    <label class="form-label">Marca</label>
+                    <div class="input-field">   
+                        <input type="text" class="form-control" value="Eva n' Essence" required>
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label class="form-label">Fragrância</label>
+                    <div class="input-field">   
+                        <input type="text" class="form-control" value="Floral" required>
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label class="form-label">Volume (ml)</label>
+                    <div class="input-field">   
+                        <input type="number" class="form-control" value="100" required>
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label class="form-label">Preço (R$)</label>
+                    <div class="input-field">   
+                        <input type="number" step="0.01" class="form-control" value="199.90" required>
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label class="form-label">Quantidade em Estoque</label>
+                    <div class="input-field">   
+                        <input type="number" class="form-control" value="20" required>
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label class="form-label">Imagem do Produto</label>
+                    <div class="input-field" style="padding: 8px 15px;">   
+                        <input type="file" id="imagem-perfume" class="form-control" style="padding: 5px 0;">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <img src="https://via.placeholder.com/100" alt="Preview" class="preview-imagem">
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <button type="submit" class="btn-default" style="background-color: #22c55e;">
+                    <i class="fa-solid fa-check"></i>
+                    Salvar Alterações
+                </button>
+                <a href="consultaPerfume.html" class="btn-default" style="background-color: #dc2626;">
+                    <i class="fa-solid fa-xmark"></i>
+                    Cancelar
+                </a>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // Simulação de preview de imagem (apenas visual)
+        document.getElementById('imagem-perfume').addEventListener('change', function(e) {
+            const preview = document.querySelector('.preview-imagem');
+            preview.src = URL.createObjectURL(e.target.files[0]);
+        });
+    </script>
+</body>
+</html>
