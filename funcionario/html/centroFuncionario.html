@@ -18,7 +18,7 @@
 
     <main id="dashboard_container">
         <div class="dashboard_card">
-            <h2 class="card_title">Cadastros</h2>
+            <h2 class="card_title">Funcionarios</h2>
             <div class="card_buttons">
                 <form action="../../fornecedor/registerFornecedor.html" method="post">
                     <button class="btn-default" type="submit">
@@ -48,6 +48,43 @@
                     </button>
                 </form>
                 
+
+                <form action="../../estoque/registerPerfume.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                        Cadastrar Perfume
+                    </button>
+                </form>
+                
+                <form action="consultarPerfume.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Consultar Perfumes
+                    </button>
+                </form>
+
+                <form action="../../estoque/registerPerfume.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-clipboard"></i>
+                        Relatorios
+                    </button>
+                </form>
+
+                <form action="../../estoque/registerPerfume.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Consultar Relatorios
+                    </button>
+                </form>
+            
+
+            </div>
+        </div>
+
+        <div class="dashboard_card">
+            <h2 class="card_title">Administrador</h2>
+            <div class="card_buttons">
+
                 <button class="btn-default" onclick="window.location.href='registerFuncionario.html'">
                     <i class="fa-solid fa-user-plus"></i>
                     Adicionar Funcionário
@@ -57,27 +94,6 @@
                     <button class="btn-default" type="submit">
                         <i class="fa-solid fa-users"></i>
                         Consultar Funcionários
-                    </button>
-                </form>
-                
-            </div>
-        </div>
-
-        <div class="dashboard_card">
-            <h2 class="card_title">Estoque</h2>
-            <div class="card_buttons">
-
-                <form action="../../estoque/registerPerfume.html" method="post">
-                    <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-plus"></i>
-                        Cadastrar Perfume
-                    </button>
-                </form>
-                
-                <form action="consultarPerfume.html" method="post">
-                    <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-boxes-stacked"></i>
-                        Consultar Perfumes
                     </button>
                 </form>
 
