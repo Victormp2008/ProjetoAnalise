@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Venda de Perfume</title>
+  <link rel="stylesheet" href="../css/consultarPerfume.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <main class="form-container">
+    <div class="top-actions">
+      <button class="btn-default" onclick="window.location.href='centroFuncionario.html'">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+
+    <h1 class="form-title"><i class="fa-solid fa-cart-shopping"></i> Venda de Perfume</h1>
+
+    <form class="form-box">
+      <label for="perfume">Selecione o Perfume:</label>
+      <select id="perfume" name="perfume">
+        <option value="">-- Escolher --</option>
+        <option>Essence Bloom - 100ml</option>
+        <option>Pure Gold - 50ml</option>
+        <option>Velvet Oud - 75ml</option>
+      </select>
+
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" name="quantidade" />
+
+      <p class="total">Total estimado: R$ 0,00</p>
+
+      <!-- Redireciona para a página da Nota Fiscal -->
+      <button type="button" class="btn-default" onclick="window.location.href='notaFiscal.html'">
+        <i class="fa-solid fa-file-invoice"></i> Emitir Nota Fiscal
+      </button>
+    </form>
+  </main>
+</body>
+</html>

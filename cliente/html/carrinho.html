@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Carrinho</title>
+  <link rel="stylesheet" href="../css/carrinho.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <main class="carrinho-container">
+    <button class="btn-default" onclick="window.location.href='painelCliente.html'">
+      <i class="fa-solid fa-arrow-left"></i> Voltar
+    </button>
+
+    <h1 class="carrinho-title"><i class="fa-solid fa-cart-shopping"></i> Meu Carrinho</h1>
+
+    <div class="carrinho-itens">
+      <div class="item">
+        <h2>Essence Bloom - 100ml</h2>
+        <p>Quantidade: 1</p>
+        <p>Preço: R$ 199,00</p>
+        <button class="btn-remover">Remover</button>
+      </div>
+
+      <div class="item">
+        <h2>Velvet Oud - 75ml</h2>
+        <p>Quantidade: 2</p>
+        <p>Preço: R$ 359,80</p>
+        <button class="btn-remover">Remover</button>
+      </div>
+    </div>
+
+    <div class="carrinho-resumo">
+      <p><strong>Total:</strong> R$ 558,80</p>
+      <button class="btn-finalizar">
+        <i class="fa-solid fa-credit-card"></i> Finalizar Compra
+      </button>
+    </div>
+  </main>
+</body>
+</html>

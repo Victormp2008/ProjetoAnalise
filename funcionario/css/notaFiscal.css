@@ -1,0 +1,67 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    background: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5d3c3c;
+  }
+  
+  .btn-voltar {
+    margin-bottom: 20px;
+    background-color: #5d3c3c;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn-voltar i {
+    margin-right: 5px;
+  }
+  
+  .nf-info p {
+    margin: 4px 0;
+    font-size: 16px;
+  }
+  
+  .nf-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .nf-table th, .nf-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .nf-table th {
+    background-color: #f5eaea;
+    color: #5d3c3c;
+  }
+  
+  .total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
