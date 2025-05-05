@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios</title>
+  <link rel="stylesheet" href="relatorios.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <main id="relatorios_container">
+    <div class="top-actions">
+        <form action="../funcionario/html/centroFuncionario.html" method="post">
+            <button class="btn-default" type="submit">
+                <i class="fa-solid fa-arrow-left"></i> Voltar
+            </button>
+          </form>
+    </div>
+
+    <h1 class="page-title"><i class="fa-solid fa-chart-line"></i> Relatórios</h1>
+
+    <div class="grid-relatorios">
+      <button onclick="window.location.href='relatorioVendasFuncionario.html'" class="btn-default"><i class="fa-solid fa-user-tie"></i> Vendas por Funcionário</button>
+      <button onclick="window.location.href='metasVentas.html'" class="btn-default"><i class="fa-solid fa-calendar-days"></i> Vendas por Mês</button>
+      <button onclick="window.location.href='metasVendas.html'" class="btn-default"><i class="fa-solid fa-bullseye"></i> Metas de Vendas</button>
+      <button onclick="window.location.href='relatorioVendasFuncionario.html'" class="btn-default"><i class="fa-solid fa-clock"></i> Horas Trabalhadas</button>
+      <button onclick="window.location.href='relatorioVendasFuncionario.html'"class="btn-default"><i class="fa-solid fa-receipt"></i> Relatórios de Produtos</button>
+      <button onclick="window.location.href='relatorioVendasFuncionario.html'" class="btn-default"><i class="fa-solid fa-money-bill-trend-up"></i> Receita Geral</button>
+    </div>
+  </main>
+</body>
+</html>
