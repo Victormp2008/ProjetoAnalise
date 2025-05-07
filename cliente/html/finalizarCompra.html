@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="../css/finalizarCompra.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <main class="finalizar-container">
+    <div class="top-bar">
+      <button class="btn-default" onclick="window.location.href='carrinho.html'">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+
+    <h1 class="page-title"><i class="fa-solid fa-credit-card"></i> Finalizar Compra</h1>
+
+    <form class="form-compra">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" />
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" placeholder="Rua, nº, bairro, cidade" />
+
+      <label for="pagamento">Forma de pagamento:</label>
+      <select id="pagamento" name="pagamento">
+        <option value="cartao">Cartão de Crédito</option>
+        <option value="pix">PIX</option>
+        <option value="boleto">Boleto Bancário</option>
+      </select>
+
+      <button type="submit" class="btn-default btn-confirmar">
+        <i class="fa-solid fa-check"></i> Confirmar Compra
+      </button>
+    </form>
+  </main>
+</body>
+</html>
