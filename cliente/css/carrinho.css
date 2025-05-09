@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #7F9DA0;
   }
   
   .carrinho-container {
@@ -25,7 +25,7 @@ body {
     border-radius: 5px;
     font-size: 14px;
   }
-  
+
   .btn-default i {
     margin-right: 5px;
   }
