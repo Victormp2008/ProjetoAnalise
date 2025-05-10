@@ -5,10 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil do Cliente</title>
   <link rel="stylesheet" href="../css/verPerfil.css" />
+  <link rel="stylesheet" href="../../css/consulta.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #7a9c9e;
+      color: #333;
+    }
+
+    #page_header {
+      background-color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #title {
+      font-size: 24px;
+      color: #5b2a2a;
+      margin: 0;
+    }
+
+    .actions .btn-default {
+      background-color: #764848;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .actions .btn-default:hover {
+      background-color: #5b2a2a;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .dashboard_card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .card_title {
+      font-size: 24px;
+      color: #5b2a2a;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card_buttons p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .card_buttons {
+      margin-top: 20px;
+    }
+
+    .btn-default {
+      background-color: #764848;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-default:hover {
+      background-color: #5b2a2a;
+    }
+  </style>
 </head>
 <body>
-  <main id="dashboard_container">
+  <div id="page_header">
+    <h1 id="title">Eva n' Essence</h1>
+    <div class="actions">
+      <button class="btn-default" onclick="window.location.href='painelCliente.html'">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+  </div>
+
+  <main>
     <div class="dashboard_card">
       <h2 class="card_title"><i class="fa-solid fa-user"></i> Meu Perfil</h2>
 
@@ -17,12 +113,6 @@
         <p><strong>Email:</strong> joao.silva@email.com</p>
         <p><strong>Telefone:</strong> (11) 91234-5678</p>
         <p><strong>Endereço:</strong> Rua das Flores, 123 - São Paulo/SP</p>
-      </div>
-
-      <div class="card_buttons">
-        <button class="btn-default" onclick="window.location.href='painelCliente.html'">
-          <i class="fa-solid fa-arrow-left"></i> Voltar ao Painel
-        </button>
       </div>
     </div>
   </main>
