@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback - Eva n' Essence</title>
+  <link rel="stylesheet" href="../css/verPerfumes.css" />
+  <link rel="stylesheet" href="../../css/consulta.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #7a9c9e;
+      color: #333;
+    }
+
+    #page_header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #title {
+      font-size: 28px;
+      color: #5b2a2a;
+      margin: 0;
+    }
+
+    .actions {
+      margin-top: 10px;
+    }
+
+    .btn-default {
+      background-color: #764848; /* Cor do seu projeto */
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-default:hover {
+      background-color: #5b2a2a; /* Cor do seu projeto */
+    }
+
+    .feedback-container {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .feedback-wrapper {
+      background-color: white; /* Fundo branco para o feedback */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .feedback-wrapper h2 {
+      font-size: 24px;
+      color: #5b2a2a;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .form-group input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .rating input[type="radio"] {
+      display: none;
+    }
+
+    .rating label {
+      font-size: 40px;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .rating input[type="radio"]:checked ~ label {
+      color: #f39c12; /* Cor dourada quando selecionada */
+    }
+
+    .rating input[type="radio"]:hover ~ label {
+      color: #f39c12; /* Cor dourada quando passar o mouse */
+    }
+
+    .feedback-wrapper button {
+      background-color: #764848; /* Cor do seu projeto */
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .feedback-wrapper button:hover {
+      background-color: #5b2a2a;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="page_header">
+    <h1 id="title">Eva n' Essence</h1>
+    <div class="actions">
+      <button class="btn-default" onclick="window.location.href='confirmacaoCompra.html'">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+  </div>
+
+  <div class="feedback-container">
+    <div class="feedback-wrapper">
+      <h2>Deixe seu Feedback</h2>
+
+      <!-- Nível de Satisfação -->
+      <div class="form-group">
+        <label for="satisfaction">Nível de Satisfação (0 a 5 estrelas)</label>
+        <div class="rating">
+          <input type="radio" id="star1" name="satisfaction" value="1">
+          <label for="star1">&#9733;</label>
+          <input type="radio" id="star2" name="satisfaction" value="2">
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="star3" name="satisfaction" value="3">
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="star4" name="satisfaction" value="4">
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="star5" name="satisfaction" value="5">
+          <label for="star5">&#9733;</label>
+        </div>
+      </div>
+
+      <!-- Compraria novamente -->
+      <div class="form-group">
+        <label for="buy-again">Compraria novamente?</label><br>
+        <label>
+          <input type="radio" name="buy-again" value="sim" /> Sim
+        </label>
+        <label>
+          <input type="radio" name="buy-again" value="nao" /> Não
+        </label>
+      </div>
+
+      <!-- Recomendaria para um amigo -->
+      <div class="form-group">
+        <label for="recommend">Recomendaria para um amigo?</label><br>
+        <label>
+          <input type="radio" name="recommend" value="sim" /> Sim
+        </label>
+        <label>
+          <input type="radio" name="recommend" value="nao" /> Não
+        </label>
+      </div>
+
+      <!-- Enviar Feedback -->
+      <div class="form-group">
+        <button onclick="window.location.href='painelCliente.html'" type="submit">Enviar Feedback</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

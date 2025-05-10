@@ -8,19 +8,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
+  <header id="page_header">
+    <h1 id="title">Eva n' Essence</h1>
+    <div id="user_info">
+        <span id="user_name">João da Silva</span>
+        <span id="user_role">Cliente</span>
+    </div>
+  </header>
   <main id="dashboard_container">
     <div class="dashboard_card">
-      <h2 class="card_title">Bem-vindo, João da Silva</h2>
-      <div class="card_buttons">
+      <h2 class="card_title">
+        Bem-vindo, João da Silva
         <button class="btn-default" onclick="window.location.href='verPerfil.html'">
-          <i class="fa-solid fa-user"></i> Ver Perfil
+          <i class="fa-solid fa-user"></i>
         </button>
+      </h2>
+      <div class="card_buttons">
         <button class="btn-default" onclick="window.location.href='verPerfumes.html'">
-          <i class="fa-solid fa-spray-can-sparkles"></i> Ver Perfumes
+          <i class="fa-solid fa-spray-can-sparkles"></i>Produtos
         </button>
         <button class="btn-default" onclick="window.location.href='carrinho.html'">
           <i class="fa-solid fa-cart-shopping"></i> Carrinho
         </button>
+      </div>
+    </div>
+    
+    <div class="dashboard_card">
+      <h2 class="card_title">Histórico</h2>
+      <div class="card_buttons">
         <button class="btn-default" onclick="window.location.href='historicoCompras.html'">
           <i class="fa-solid fa-clock-rotate-left"></i> Histórico de Compras
         </button>

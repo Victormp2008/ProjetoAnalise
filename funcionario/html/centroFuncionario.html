@@ -11,7 +11,7 @@
     <header id="page_header">
         <h1 id="title">Eva n' Essence</h1>
         <div id="user_info">
-            <span id="user_name">Fulano da Silva</span>
+            <span id="user_name">Glauber Silva</span>
             <span id="user_role">Administrador</span>
         </div>
     </header>
@@ -20,46 +20,45 @@
         <div class="dashboard_card">
             <h2 class="card_title">Funcionarios</h2>
             <div class="card_buttons">
-                <form action="../../fornecedor/registerFornecedor.html" method="post">
-                    <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-truck"></i>
-                        Cadastrar Fornecedor
-                    </button>
-                </form>
-
                 <form action="../../fornecedor/consultarFornecedor.html" method="post">
                     <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Consultar Fornecedores
-                    </button>
-                </form>
-
-                <form action="../../cliente/html/registerCliente_copy.html" method="post">
-                    <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-user-plus"></i>
-                        Cadastrar Cliente
+                        <i class="fa-solid fa-truck"></i>
+                        Fornecedores
                     </button>
                 </form>
 
                 <form action="consultarCliente.html" method="post">
                     <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Consultar Clientes
+                        <i class="fa-solid fa-user-plus"></i>
+                        Clientes
                     </button>
                 </form>
                 
-
-                <form action="../../estoque/registerPerfume.html" method="post">
+                <form action="../../estoque/consultaPerfume.html" method="post">
                     <button class="btn-default" type="submit">
                         <i class="fa-solid fa-spray-can-sparkles"></i>
-                        Cadastrar Perfume
+                        Estoque
                     </button>
                 </form>
-                
-                <form action="consultarPerfume.html" method="post">
+
+                <form action="../../estoque/consultarVenda.html" method="post">
                     <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Consultar Perfumes
+                        <i class="fa-solid fa-receipt"></i>
+                        Vendas
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="dashboard_card">
+            <h2 class="card_title">Administrador</h2>
+            <div class="card_buttons">
+
+                <form action="consultarFuncionario.html" method="post">
+                    <button class="btn-default" type="submit">
+                        <i class="fa-solid fa-users"></i>
+                        Funcionários
                     </button>
                 </form>
 
@@ -70,53 +69,32 @@
                     </button>
                 </form>
 
-                <form action="../../estoque/registerPerfume.html" method="post">
-                    <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Consultar Relatorios
-                    </button>
-                </form>
-            
-
-            </div>
-        </div>
-
-        <div class="dashboard_card">
-            <h2 class="card_title">Administrador</h2>
-            <div class="card_buttons">
-
-                <button class="btn-default" onclick="window.location.href='registerFuncionario.html'">
-                    <i class="fa-solid fa-user-plus"></i>
-                    Adicionar Funcionário
-                </button>
-
-                <form action="consultarFuncionario.html" method="post">
-                    <button class="btn-default" type="submit">
-                        <i class="fa-solid fa-users"></i>
-                        Consultar Funcionários
-                    </button>
-                </form>
-
             </div>
         </div>
 
         <div class="dashboard_card">
             <h2 class="card_title">Registro de Ponto</h2>
             <div class="card_buttons">
-                <button class="btn-default" id="registrar_ponto" onclick="window.location.href='registroPonto.html'">
-                    <i class="fa-solid fa-fingerprint"></i>
-                    Registrar Ponto
-                </button>
-                <button class="btn-default" onclick="window.location.href='registroPonto.html'">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    Ver Meus Registros
-                </button>
+              <button class="btn-ponto" onclick="registrarPonto()">
+                <i class="fa-solid fa-fingerprint"></i>
+                Registrar Ponto 
+              </button>
+              <button class="btn-ponto" onclick="window.location.href='registroPonto.html'">
+                <i class="fa-solid fa-calendar-days"></i>
+                Consultar Registros 
+              </button>
             </div>
-            <div id="ponto_status">
-                <p>Último registro: <span>Hoje às 08:15</span></p>
-                <p>Status atual: <span class="status_working">Em trabalho</span></p>
+            <div id="ponto_status" style="display: none;">
+              <p>Último registro: <span>Hoje às 08:15</span></p>
+              <p>Status atual: <span class="status_working">Em trabalho</span></p>
             </div>
-        </div>
+          </div>
     </main>
 </body>
+<script>
+  function registrarPonto() {
+    // Aqui você pode simular o horário real com JS se quiser
+    document.getElementById("ponto_status").style.display = "block";
+  }
+</script>
 </html>

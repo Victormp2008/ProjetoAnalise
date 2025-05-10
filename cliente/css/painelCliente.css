@@ -1,58 +1,227 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #8aa5a5;
-  }
-  
-  #dashboard_container {
-    padding: 40px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.filtro-box {
     display: flex;
-    justify-content: center;
-  }
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: flex-end;
+}
   
-  .dashboard_card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 600px;
-  }
+.filtro-box label {
+    font-weight: 500;
+    color: #333;
+}
   
-  .card_title {
-    margin-bottom: 25px;
-    color: #5b2a2a;
-    font-size: 28px;
-    border-bottom: 2px solid #5b2a2a;
-    padding-bottom: 10px;
-  }
-  
-  .card_buttons {
+.filtro-box input {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-  }
-  
-  .btn-default {
-    background-color: #6f3e3e;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
+    min-height: 100vh;
+    background-color: #7F9DA0;
+    padding: 20px;
+}
+
+#title {
+    font-family: 'Garamond', serif;
+    color: #764951;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#page_header {
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#user_info {
+    text-align: center;
+    color: #404044;
+}
+
+#user_name {
+    font-weight: 600;
+    display: block;
+}
+
+#user_role {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#dashboard_container {
+    display: grid;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.dashboard_card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card_title {
+    color: #764951;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center; /* Alinha o nome e o botão na mesma linha */
+    justify-content: space-between; /* Espaça o nome e o botão */
+}
+
+.card_title button {
+    margin-left: 10px; /* Espaço entre o nome e o botão */
+}
+
+.card_title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #764951;
+    bottom: -8px;
+    left: 0;
+    border-radius: 3px;
+}
+
+.card_buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card_buttons button {
+    width: 100%;
     text-align: left;
+    padding: 10px 16px;
+    font-size: 1rem;
+}
+
+.btn-default {
+    background-color: #764951;
     display: flex;
     align-items: center;
-    gap: 10px;
-  }
-  
-  .btn-default:hover {
-    background-color: #532e2e;
-  }
-  
-  .btn-default i {
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffff;
+    cursor: pointer;
+    gap: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-default:hover {
+    background-color: #5a343a;
+    transform: translateY(-2px);
+}
+
+.btn-default i {
     font-size: 18px;
-  }
-  
+}
+
+.btn-ponto {
+    background-color: #764951;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffff;
+    cursor: pointer;
+    gap: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-ponto:hover {
+    background-color: #5a343a;
+    transform: translateY(-2px);
+}
+
+.btn-ponto i {
+    font-size: 18px;
+}
+
+#ponto_status {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#ponto_status p {
+    margin-bottom: 8px;
+}
+
+#ponto_status span {
+    font-weight: 500;
+}
+
+.status_working {
+    color: #22c55e;
+}
+
+.status_away {
+    color: #f59e0b;
+}
+
+.status_off {
+    color: #ef4444;
+}
+
+@media screen and (max-width: 768px) {
+    .card_buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard_card {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+    
+    #page_header, .dashboard_card {
+        padding: 15px;
+    }
+    
+    .btn-default {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

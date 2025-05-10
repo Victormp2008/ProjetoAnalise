@@ -5,62 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Perfumes Disponíveis</title>
   <link rel="stylesheet" href="../css/verPerfumes.css" />
+  <link rel="stylesheet" href="../../css/consulta.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #7a9c9e;
+      color: #333;
+    }
+
+    #perfume_container {
+      padding: 30px;
+    }
+
+    .title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+    }
+
+    .page-title {
+      font-size: 28px;
+      color: #5b2a2a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .perfume-cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .card img.product-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      color: #5b2a2a;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .status {
+      font-weight: bold;
+    }
+
+    .available {
+      color: green;
+    }
+
+    .unavailable {
+      color: red;
+    }
+
+    .btn-default,
+    .btn-view {
+      background-color: #764848;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-default:hover,
+    .btn-view:hover {
+      background-color: #5b2a2a;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    .close-modal {
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
-  <main id="perfume_container">
-    <div class="top-actions">
+  <div id="page_header">
+    <h1 id="title">Eva n' Essence</h1>
+    <div class="actions">
       <button class="btn-default" onclick="window.location.href='painelCliente.html'">
         <i class="fa-solid fa-arrow-left"></i> Voltar
       </button>
     </div>
+  </div>
 
-    <h1 class="page-title"><i class="fa-solid fa-spray-can-sparkles"></i> Perfumes Disponíveis</h1>
-
-    <div class="grid">
-
-      <div class="card">
-        <h2>Essence Bloom - 100ml</h2>
-        <p>R$ 199,00</p>
-        <p class="status available">Disponível</p>
-        <button class="btn-view" onclick="window.location.href='produtoDisponivel.html'">Ver Produto</button>
+  <main id="perfume_container">
+    <div class="perfume-wrapper">
+      <div class="title-bar">
+        <h1 class="page-title"><i class="fa-solid fa-spray-can-sparkles"></i> Perfumes</h1>
+        <button class="btn-default" onclick="window.location.href='carrinho.html'">
+          <i class="fa-solid fa-cart-shopping"></i> Carrinho
+        </button>
       </div>
 
-      <div class="card">
-        <h2>Pure Gold - 50ml</h2>
-        <p>R$ 149,90</p>
-        <p class="status unavailable">Indisponível</p>
-        <button class="btn-view" disabled>Ver Produto</button>
-      </div>
+      <div class="perfume-cards-container">
+        <div class="card">
+          <img src="../../imgs/download.jpg" alt="Essence Bloom" class="product-img" />
+          <h2>Essence Bloom - 100ml</h2>
+          <p>R$ 199,00</p>
+          <p class="status available">Disponível</p>
+          <button class="btn-view add-to-cart"><i class="fa-solid fa-plus"></i> Adicionar ao Carrinho</button>
+        </div>
 
-      <div class="card">
-        <h2>Velvet Oud - 75ml</h2>
-        <p>R$ 179,90</p>
-        <p class="status available">Disponível</p>
-        <button class="btn-view">Ver Produto</button>
-      </div>
+        <div class="card">
+          <img src="../../imgs/relampago.jpg" alt="Relampago Marquinhos" class="product-img" />
+          <h2>Relampago Marquinhos - 100ml</h2>
+          <p>R$ 99,99</p>
+          <p class="status available">Disponível</p>
+          <button class="btn-view add-to-cart"><i class="fa-solid fa-plus"></i> Adicionar ao Carrinho</button>
+        </div>
 
-      <div class="card">
-        <h2>Crystal Blue - 100ml</h2>
-        <p>R$ 165,00</p>
-        <p class="status available">Disponível</p>
-        <button class="btn-view">Ver Produto</button>
-      </div>
-
-      <div class="card">
-        <h2>Night Shadow - 90ml</h2>
-        <p>R$ 189,00</p>
-        <p class="status unavailable">Indisponível</p>
-        <button class="btn-view" disabled>Ver Produto</button>
-      </div>
-
-      <div class="card">
-        <h2>Fresh Citrus - 60ml</h2>
-        <p>R$ 129,90</p>
-        <p class="status available">Disponível</p>
-        <button class="btn-view">Ver Produto</button>
+        <div class="card">
+          <img src="../../imgs/ben10.jpg" alt="Ben 10" class="product-img" />
+          <h2>Ben 10 - 250ml</h2>
+          <p>R$ 199,00</p>
+          <p class="status available">Disponível</p>
+          <button class="btn-view add-to-cart"><i class="fa-solid fa-plus"></i> Adicionar ao Carrinho</button>
+        </div>
       </div>
     </div>
   </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>Produto adicionado ao carrinho!</p>
+      <button class="btn-default close-modal">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+    const modal = document.getElementById("modal");
+    const closeModalButton = document.querySelector(".close-modal");
+
+    addToCartButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        modal.classList.add("active");
+      });
+    });
+
+    closeModalButton.addEventListener("click", () => {
+      modal.classList.remove("active");
+    });
+
+    // Fecha ao clicar fora do modal
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+      }
+    });
+  </script>
 </body>
 </html>

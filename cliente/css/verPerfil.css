@@ -1,61 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #7a9c9e;
-    color: #333;
-  }
-  
-  #dashboard_container {
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .dashboard_card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card_title {
-    font-size: 24px;
-    color: #5b2a2a;
+    background-color: #7F9DA0;
+    padding: 20px;
+}
+
+#title {
+    font-family: 'Garamond', serif;
+    color: #764951;
+    text-align: center;
     margin-bottom: 20px;
+}
+
+#page_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.btn-default {
+    background-color: #764951;
     display: flex;
     align-items: center;
-    gap: 10px;
-  }
-  
-  .card_buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .card_buttons p {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  .btn-default {
-    background-color: #764848;
-    color: white;
     border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffff;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
     gap: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-  }
-  
-  .btn-default:hover {
-    background-color: #5b2a2a;
-  }
-  
+}
+
+.btn-default:hover {
+    background-color: #5a343a;
+}
+
+#registro_container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#registro_container h2 {
+    color: #764951;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.ponto_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.ponto_table th, .ponto_table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ponto_table th {
+    background-color: #f8f8f8;
+    color: #764951;
+    font-weight: 600;
+}
+
+.ponto_table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.resumo_ponto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resumo_card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.resumo_card h3 {
+    color: #764951;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.resumo_card p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .resumo_ponto {
+        grid-template-columns: 1fr;
+    }
+    
+    .ponto_table th, .ponto_table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #page_header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #registro_container {
+        padding: 15px;
+    }
+}

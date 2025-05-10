@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relatorios | Eva n' Essence</title>
+  <title>Vendas | Eva n' Essence</title>
   <link rel="stylesheet" href="../css/consulta.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -19,7 +19,7 @@
   </div>
 
   <main class="main-content">
-    <h2 class="section-title">Relatorios</h2>
+    <h2 class="section-title">Vendas Realizadas</h2>
 
     <div class="filtro-box">
       <label for="filtro-nome">Nome:</label>
@@ -33,31 +33,36 @@
       <table class="ponto_table">
         <thead>
           <tr>
-            <th>Tipo</th>
-            <th>Funcionario</th>
+            <th>Item</th>
             <th>Quantidade</th>
             <th>Valor</th>
-            <th>Mês</th>
-            <th>Baixar</th>
+            <th>Data</th>
+            <th>Cliente</th>
+            <th>Forma de Pagamento</th>
+            <th>Funcionario</th>
+            <th>NF</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Venda Mês</td>
-            <td>Sicrano</td>
-            <td>120</td>
-            <td>R$ 1.000,99</td>
-            <td>Abril</td>
-            <td><button class="btn-icon sell" onclick="window.location.href='vendaMes.html'"><i class="fa-solid fa-download"></i></button></td>
+            <td>Ralampago marquinhos</td>
+            <td>1</td>
+            <td>99,99</td>
+            <td>10/05/2025</td>
+            <td>Fulano da Silva</td>
+            <td>Pix</td>
+            <td>Glauber</td>
+            <td><button class="btn-icon sell" onclick="window.location.href='nf.html'"><i class="fa-solid fa-receipt"></i></button> </td>
           </tr>
           <tr>
-            <td>FeedBack Cliente</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>Maio</td>
-            <td><button class="btn-icon sell" onclick="window.location.href='feedbackCliente.html'"><i class="fa-solid fa-download"></i></button></td>
-
+            <td>Ben 10</td>
+            <td>2</td>
+            <td>300,99</td>
+            <td>02/05/2025</td>
+            <td>Beltrano da Silva</td>
+            <td>Debito</td>
+            <td>Sicrano</td>
+            <td><button class="btn-icon sell" onclick="window.location.href='nf.html'"><i class="fa-solid fa-receipt"></i></button> </td>
           </tr>
         </tbody>
       </table>

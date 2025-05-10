@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nota Fiscal</title>
+  <link rel="stylesheet" href="nf.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <button class="btn-default" onclick="window.location.href='../cliente/html/confirmacaoCompra.html'">
+      <i class="fa-solid fa-arrow-left"></i> Voltar
+    </button>
+
+    <h1><i class="fa-solid fa-receipt"></i> Nota Fiscal</h1>
+
+    <div class="nf-info">
+      <p><strong>Cliente:</strong> Fulano da Silva</p>
+      <p><strong>Data:</strong> 10/05/2025</p>
+      <p><strong>Endereço:</strong> Rua das Laranjeiras, 123 - Centro</p>
+      <p><strong>Pagamento:</strong> Cartão de Crédito</p>
+    </div>
+
+    <table class="nf-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantidade</th>
+          <th>Preço Unitário</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Essence Bloom - 100ml</td>
+          <td>1</td>
+          <td>R$ 199,00</td>
+          <td>R$ 199,00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="total"><strong>Total Geral: R$ 199,00</strong></p>
+  </div>
+</body>
+</html>

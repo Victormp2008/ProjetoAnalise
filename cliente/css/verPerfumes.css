@@ -1,84 +1,142 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #7a9c9e;
-    color: #333;
-  }
-  
-  #perfume_container {
-    padding: 30px;
-  }
-  
-  .top-actions {
-    margin-bottom: 20px;
-  }
-  
-  .page-title {
-    font-size: 28px;
-    color: #5b2a2a;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    text-align: center;
-  }
-  
-  .card h2 {
-    font-size: 18px;
-    color: #5b2a2a;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    margin: 5px 0;
-    font-size: 16px;
-  }
-  
-  .status {
-    font-weight: bold;
-  }
-  
-  .available {
-    color: green;
-  }
-  
-  .unavailable {
-    color: red;
-  }
-  
-  .btn-default,
-  .btn-view {
-    background-color: #764848;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-default:hover,
-  .btn-view:hover {
-    background-color: #5b2a2a;
-  }
-  
-  .btn-view:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #7a9c9e;
+  color: #333;
+}
+
+#perfume_container {
+  padding: 30px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #5b2a2a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Container geral */
+.perfume-wrapper {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Grade dos cards */
+.perfume-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card individual */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  font-size: 18px;
+  color: #5b2a2a;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.available {
+  color: green;
+}
+
+.unavailable {
+  color: red;
+}
+
+.btn-default,
+.btn-view {
+  background-color: #764848;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-default:hover,
+.btn-view:hover {
+  background-color: #5b2a2a;
+}
+
+.btn-view:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Mostra o modal se checkbox estiver checado */
+#cart-toggle:checked ~ .modal {
+  display: flex;
+}
+
+.close-modal {
+  margin-top: 20px;
+}
