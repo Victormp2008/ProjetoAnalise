@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Editar Perfume</title>
-  <link rel="stylesheet" href="editarPerfume.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfume | Eva n' Essence</title>
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-  <main class="editar-container">
+  <main class="form-container">
     <div class="top-bar">
       <button class="btn-default" onclick="window.location.href='consultaPerfume.html'">
         <i class="fa-solid fa-arrow-left"></i> Voltar
       </button>
     </div>
 
-    <h1 class="page-title"><i class="fa-solid fa-pen"></i> Editar Perfume</h1>
+    <h1 class="form-title"><i class="fa-solid fa-pen"></i> Editar Perfume</h1>
 
-    <form class="form-editar" method="post" action="consultaPerfume.html">
-      <label for="nome">Nome do Perfume:</label>
-      <input type="text" id="nome" name="nome" value="Essence Bloom" />
+    <form class="form-box" action="consultaPerfume.html" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" value="Essence Bloom">
 
       <label for="marca">Marca:</label>
-      <input type="text" id="marca" name="marca" value="Eva n' Essence" />
+      <input type="text" id="marca" name="marca" value="Eva n' Essence">
 
       <label for="fragrancia">Fragrância:</label>
-      <input type="text" id="fragrancia" name="fragrancia" value="Floral" />
+      <input type="text" id="fragrancia" name="fragrancia" value="Floral">
 
       <label for="volume">Volume:</label>
-      <input type="text" id="volume" name="volume" value="100ml" />
+      <input type="text" id="volume" name="volume" value="100ml">
 
       <label for="preco">Preço:</label>
-      <input type="text" id="preco" name="preco" value="199,90" />
+      <input type="text" id="preco" name="preco" value="199,00">
 
-      <label for="estoque">Estoque:</label>
-      <input type="number" id="estoque" name="estoque" value="20" />
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" name="quantidade" value="10">
 
-      <button type="submit" class="btn-default confirmar">
+      <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria">
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+      </select>
+
+      <button type="submit" class="btn-default">
         <i class="fa-solid fa-check"></i> Salvar Alterações
       </button>
     </form>

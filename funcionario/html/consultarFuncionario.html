@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultar Funcionários | Eva n' Essence</title>
-    <link rel="stylesheet" href="../css/centroFuncionario.css">
-    <link rel="stylesheet" href="../css/registroponto.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Funcionarios | Eva n' Essence</title>
+  <link rel="stylesheet" href="../../css/consulta.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <div id="page_header">
-        <h1 id="title">Eva n' Essence</h1>
-        <div style="display: flex; gap: 12px;">
-            <button class="btn-default" onclick="window.location.href='registerFuncionario.html'">
-                <i class="fa-solid fa-user-plus"></i>
-                Adicionar Funcionário
-            </button>
-            <button class="btn-default" onclick="window.location.href='centroFuncionario.html'">
-                <i class="fa-solid fa-arrow-left"></i>
-                Voltar
-            </button>
-        </div>
+  <!-- Cabeçalho padrão -->
+  <div id="page_header">
+    <h1 id="title">Eva n' Essence</h1>
+    <div class="actions">
+      <button class="btn-default" onclick="window.location.href='registerFuncionario.html'">
+        <i class="fa-solid fa-plus"></i> Novo
+      </button>
+      <button class="btn-default" onclick="window.location.href='centroFuncionario.html'">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <h2 class="section-title">Funcionarios Cadastrados</h2>
+
+    <div class="filtro-box">
+      <label for="filtro-nome">Nome:</label>
+      <input type="text" id="filtro-nome" placeholder="Filtrar por nome...">
+      <label for="filtro-email">E-mail:</label>
+      <input type="text" id="filtro-email" placeholder="Filtrar por e-mail...">
+      <button><i class="fa-solid fa-filter"></i></button>
     </div>
 
-    <main id="registro_container">
-        <h2>Funcionários Cadastrados</h2>
-
-        <div class="filtro-box">
-            <label for="filtro-nome">Filtrar por Nome:</label>
-            <input type="text" id="filtro-nome" placeholder="Digite o nome...">
-          
-            <label for="filtro-email">Filtrar por E-mail:</label>
-            <input type="text" id="filtro-email" placeholder="Digite o e-mail...">
-          
-            <button class="btn-default" type="button">
-              <i class="fa-solid fa-filter"></i> Aplicar Filtro
-            </button>
-          </div>
-          
-
-        <div class="table-responsive">
-            <table class="ponto_table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Matrícula</th>
-                        <th>Cargo</th>
-                        <th>E-mail</th>
-                        <th>Telefone</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Dados simulados -->
-                    <tr>
-                        <td>Maria Silva</td>
-                        <td>001234</td>
-                        <td>Vendedora</td>
-                        <td>maria@evaessence.com</td>
-                        <td>(11) 91234-5678</td>
-                        <td>
-                            <button onclick="window.location.href='consultarFuncionarioedit.html'" class="btn-default">
-                                <i class="fa-solid fa-pen"></i>
-                                Editar
-                            </button>
-                            <button onclick="window.location.href='consultarFuncionariocopy.html'" class="btn-default" >
-                                <i class="fa-solid fa-trash"></i>
-                                Remover
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pedro Almeida</td>
-                        <td>001235</td>
-                        <td>Estoquista</td>
-                        <td>pedro@evaessence.com</td>
-                        <td>(21) 99888-6655</td>
-                        <td>
-                            <button onclick="window.location.href='consultarFuncionarioedit.html'" class="btn-default">
-                                <i class="fa-solid fa-pen"></i>
-                                Editar
-                            </button>
-                            <button onclick="window.location.href='consultarFuncionariocopy.html'" class="btn-default" >
-                                <i class="fa-solid fa-trash"></i>
-                                Remover
-                            </button>
-                        </td>
-                    </tr>
-                    <!-- Mais linhas se necessário -->
-                </tbody>
-            </table>
-        </div>
-    </main>
+    <div class="table-responsive">
+      <table class="ponto_table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>CPF</th>
+            <th>E-mail</th>
+            <th>Endereço</th>
+            <th>Cargo</th>
+            <th>Currículo</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fulano dos Santos</td>
+            <td>+55 (49) 9999-9999</td>
+            <td>000.000.000-00</td>
+            <td>fulanosantos@gmail.com</td>
+            <td>Rua Certeza, n 999, Bairro Duvida</td>
+            <td>Estagiário (KKKKKKKKK) </td>
+            <td>
+                <button class="btn-icon download"><i class="fa-solid fa-download"></i></button>
+            </td>
+            <td>
+              <button onclick="window.location.href='consultarFuncionarioEdit.html'" class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
+              <button onclick="window.location.href='consultarFuncionarioDelete.html'" class="btn-icon delete"><i class="fa-solid fa-trash"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Beltrado Ferreira</td>
+            <td>+55 (49) 9999-9999</td>
+            <td>000.000.000-00</td>
+            <td>beltranoferreira@gmail.com</td>
+            <td>Rua Negativo, n 999, Bairro Positivo</td>
+            <td>Gerente</td>
+            <td>
+                <button class="btn-icon download"><i class="fa-solid fa-download"></i></button>
+            </td>
+            <td>
+              <button onclick="window.location.href='consultarFuncionarioEdit.html'" class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
+              <button onclick="window.location.href='consultarFuncionarioDelete.html'" class="btn-icon delete"><i class="fa-solid fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
 </body>
 </html>

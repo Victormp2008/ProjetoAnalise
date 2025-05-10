@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultar Clientes | Eva n' Essence</title>
+  <title>Consultar Funcionarios | Eva n' Essence</title>
   <link rel="stylesheet" href="../../css/consulta.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -12,7 +12,7 @@
   <div id="page_header">
     <h1 id="title">Eva n' Essence</h1>
     <div class="actions">
-      <button class="btn-default" onclick="window.location.href='../../cliente/html/registerClienteCopy.html'">
+      <button class="btn-default" onclick="window.location.href='registerFuncionario.html'">
         <i class="fa-solid fa-plus"></i> Novo
       </button>
       <button class="btn-default" onclick="window.location.href='centroFuncionario.html'">
@@ -22,7 +22,7 @@
   </div>
 
   <main class="main-content">
-    <h2 class="section-title">Clientes Cadastrados</h2>
+    <h2 class="section-title">Funcionarios Cadastrados</h2>
 
     <div class="filtro-box">
       <label for="filtro-nome">Nome:</label>
@@ -41,31 +41,26 @@
             <th>CPF</th>
             <th>E-mail</th>
             <th>Endereço</th>
+            <th>Cargo</th>
+            <th>Currículo</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Fulano da Silve</td>
+            <td>Beltrado Ferreira</td>
             <td>+55 (49) 9999-9999</td>
             <td>000.000.000-00</td>
-            <td>fulano@gmail.com</td>
-            <td>Rua Sim, n 999, Bairro Não</td>
+            <td>beltranoferreira@gmail.com</td>
+            <td>Rua Negativo, n 999, Bairro Positivo</td>
+            <td>Gerente</td>
             <td>
-              <button onclick="window.location.href='consultarClienteEdit.html'" class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
-              <button onclick="window.location.href='consultarClienteDelete.html'" class="btn-icon delete"><i class="fa-solid fa-trash"></i></button>
+                <button class="btn-icon download"><i class="fa-solid fa-download"></i></button>
             </td>
-          </tr>
-          <tr>
-            <td>Beltrano Pereira</td>
-            <td>+55 (49) 9999-9999</td>
-            <td>000.000.000-00</td>
-            <td>beltrano@gmail.com</td>
-            <td>Rua Não, n 111, Bairro Sim</td>
             <td>
-                <button onclick="window.location.href='consultarClienteEdit.html'" class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
-                <button onclick="window.location.href='consultarClienteDelete.html'" class="btn-icon delete"><i class="fa-solid fa-trash"></i></button>
-              </td>
+              <button onclick="window.location.href='consultarFuncionarioEdit.html'" class="btn-icon edit"><i class="fa-solid fa-pen"></i></button>
+              <button onclick="window.location.href='consultarFuncionarioDelete.html'" class="btn-icon delete"><i class="fa-solid fa-trash"></i></button>
+            </td>
           </tr>
         </tbody>
       </table>

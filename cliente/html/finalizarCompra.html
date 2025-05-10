@@ -5,19 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finalizar Compra</title>
   <link rel="stylesheet" href="../css/finalizarCompra.css">
+  <link rel="stylesheet" href="../../css/consulta.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <main class="finalizar-container">
-    <div class="top-bar">
-      <button class="btn-default" onclick="window.location.href='carrinho.html'">
+  <div id="page_header">
+    <h1 id="title">Eva n' Essence</h1>
+    <div class="actions">
+      <button class="btn-default" onclick="window.location.href='painelCliente.html'">
         <i class="fa-solid fa-arrow-left"></i> Voltar
       </button>
     </div>
+  </div>
+  <main class="finalizar-container">
 
     <h1 class="page-title"><i class="fa-solid fa-credit-card"></i> Finalizar Compra</h1>
 
-    <form class="form-compra">
+    <form class="form-compra" action="confirmacaoCompra.html" method="post">
       <label for="nome">Nome completo:</label>
       <input type="text" id="nome" name="nome" placeholder="Digite seu nome" />
 

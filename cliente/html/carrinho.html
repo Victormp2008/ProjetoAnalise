@@ -1,42 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Carrinho</title>
-  <link rel="stylesheet" href="../css/carrinho.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="../css/verPerfumes.css" />
+  <link rel="stylesheet" href="../../css/consulta.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #7a9c9e;
+      color: #333;
+    }
+
+    #page_header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #title {
+      font-size: 28px;
+      color: #5b2a2a;
+      margin: 0;
+    }
+
+    .actions {
+      margin-top: 10px;
+    }
+
+    .btn-default {
+      background-color: #764848; /* Cor do seu projeto */
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-default:hover {
+      background-color: #5b2a2a; /* Cor do seu projeto */
+    }
+
+    .cart-container {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cart-wrapper {
+      background-color: white; /* Fundo branco para o carrinho */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .cart-header h1 {
+      font-size: 28px;
+      color: #5b2a2a;
+      margin: 0;
+    }
+
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .item-details {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .cart-item h2 {
+      font-size: 18px;
+      color: #5b2a2a;
+      margin: 0;
+    }
+
+    .cart-item p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .remove-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .remove-btn:hover {
+      background-color: #c0392b;
+    }
+
+    .total {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .checkout-btn {
+      background-color: #764848; /* Cor do seu projeto */
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .checkout-btn:hover {
+      background-color: #5b2a2a; /* Cor do seu projeto */
+    }
+  </style>
 </head>
 <body>
-  <main class="carrinho-container">
-    <button class="btn-default" onclick="window.location.href='painelCliente.html'">
-      <i class="fa-solid fa-arrow-left"></i> Voltar
-    </button>
 
-    <h1 class="carrinho-title"><i class="fa-solid fa-cart-shopping"></i> Meu Carrinho</h1>
+  <div id="page_header">
+    <h1 id="title">Eva n' Essence</h1>
+    <div class="actions">
+      <button class="btn-default" onclick="window.location.href='painelCliente.html'">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </button>
+    </div>
+  </div>
 
-    <div class="carrinho-itens">
-      <div class="item">
-        <h2>Essence Bloom - 100ml</h2>
-        <p>Quantidade: 1</p>
-        <p>Preço: R$ 199,00</p>
-        <button class="btn-remover">Remover</button>
+  <div class="cart-container">
+    <div class="cart-wrapper">
+      <div class="cart-header">
+        <h1><i class="fa-solid fa-cart-shopping"></i> Seu Carrinho</h1>
       </div>
 
-      <div class="item">
-        <h2>Velvet Oud - 75ml</h2>
-        <p>Quantidade: 2</p>
-        <p>Preço: R$ 359,80</p>
-        <button class="btn-remover">Remover</button>
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="../../imgs/download.jpg" alt="Essence Bloom" />
+          <div class="item-details">
+            <h2>Essence Bloom - 100ml</h2>
+            <p>R$ 199,00</p>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remover</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="../../imgs/relampago.jpg" alt="Relampago Marquinhos" />
+          <div class="item-details">
+            <h2>Relampago Marquinhos - 100ml</h2>
+            <p>R$ 99,99</p>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remover</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="../../imgs/ben10.jpg" alt="Ben 10" />
+          <div class="item-details">
+            <h2>Ben 10 - 250ml</h2>
+            <p>R$ 199,00</p>
+          </div>
+          <button class="remove-btn" onclick="removeItem(this)">Remover</button>
+        </div>
+      </div>
+
+      <div class="total">
+        <p>Total: R$ 497,99</p>
+        <button class="checkout-btn" onclick="window.location.href='finalizarCompra.html'">Finalizar Compra</button>
       </div>
     </div>
+  </div>
 
-    <div class="carrinho-resumo">
-      <p><strong>Total:</strong> R$ 558,80</p>
-      <button class="btn-finalizar" onclick="window.location.href='finalizarCompra.html'">
-        <i class="fa-solid fa-credit-card"></i> Finalizar Compra
-      </button>      
-    </div>
-  </main>
+  <script>
+    // Função para remover item do carrinho
+    function removeItem(button) {
+      const item = button.closest('.cart-item');
+      item.remove();
+      updateTotal();
+    }
+
+    // Função para atualizar o total
+    function updateTotal() {
+      const items = document.querySelectorAll('.cart-item');
+      let total = 0;
+      items.forEach(item => {
+        const price = parseFloat(item.querySelector('p').textContent.replace('R$ ', '').replace(',', '.'));
+        total += price;
+      });
+      document.querySelector('.total p').textContent = `Total: R$ ${total.toFixed(2)}`;
+    }
+  </script>
 </body>
 </html>

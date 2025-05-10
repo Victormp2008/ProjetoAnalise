@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #7F9DA0;
+  padding: 20px;
+}
+
+#page_header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page_header #title {
+  font-family: 'Garamond', serif;
+  color: #764951;
+  font-size: 1.5rem;
+}
+
+#page_header .actions {
+  display: flex;
+  gap: 10px;
+}
+
+#page_header .actions .btn-default {
+  background-color: #764951;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#page_header .actions .btn-default:hover {
+  background-color: #5a343a;
+}
+
+.main-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+h2.section-title {
+  color: #764951;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.filtro-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.filtro-box input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.filtro-box button {
+  background-color: #764951;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.ponto_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ponto_table th,
+.ponto_table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.ponto_table thead th {
+  background-color: #f8f8f8;
+  color: #764951;
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #764951;
+}
+
+.btn-icon.edit:hover { color: #22c55e; }
+.btn-icon.delete:hover { color: #ef4444; }
+.btn-icon.sell:hover { color: #3b82f6; }
+.btn-icon.download:hover {color: #0ea5e9; }
+
+@media (max-width: 600px) {
+  .filtro-box { flex-direction: column; }
+}
